@@ -7,38 +7,83 @@
 		<title>Basic Animation</title>
 		<style>
 			.square {
-				width: 300px;
-				height: 300px;
+				width: 200px;
+				height: 200px;
 				background: red;
-				position: relative;
-				/*animation-name: colors;
-				-webkit-animation-name: colors;
-				animation-duration: 5s;
-				-webkit-animation-duration: 5s;*/
+				position: absolute;
+				opacity: 0.6;
 				animation: colors 5s;
 				-webkit-animation: colors 5s;
 				animation-iteration-count: infinite;
 				-webkit-animation-iteration-count: infinite;
 			}
+			.square2 {
+				width: 200px;
+				height: 200px;
+				background: red;
+				position: absolute;
+				opacity: 0.6;
+				animation: colorsTwo 5s;
+				-webkit-animation: colorsTwo 5s;
+				animation-iteration-count: infinite;
+				-webkit-animation-iteration-count: infinite;}
+
+			.square3 {
+				width: 200px;
+				height: 200px;
+				background: red;
+				position: absolute;
+				opacity: 0.6;
+				animation: colorsThree 5s;
+				-webkit-animation: colorsThree 5s;
+				animation-iteration-count: infinite;
+				-webkit-animation-iteration-count: infinite;}
 
 			@keyframes colors {
-				0% {background: rgb(255, 0, 0); left: 0px; top: 0px;} /*red*/
-				33% {background: rgb(0, 0, 255); left: 300px; top: 0px;} /*blue*/
-				66% {background: rgb(0, 255, 0); left: 300px; top: 300px;} /*green*/
-				100% {background: rgb(255, 0, 0); left: 0px; top: 0px;} /*red*/
+				0% {background: rgb(252, 0, 215); left: 0px; top: 0px;transform: rotateY(0deg);} /*red*/
+				33% {background: rgb(0, 252, 240); left: 200px; top: 0px;transform: rotateY(360deg);} /*blue*/
+				66% {background: rgb(0, 255, 0); left: 200px; top: 200px;transform: rotateY(0deg);} /*green*/
+				100% {background: rgb(252, 0, 215); left: 0px; top: 0px;transform: rotateY(360deg);} /*red*/
 			}
 
 			@-webkit-keyframes colors {
-				0% {background: rgb(255, 0, 0); left: 0px; top: 0px;} /*red*/
-				33% {background: rgb(0, 0, 255); left: 300px; top: 0px;} /*blue*/
-				66% {background: rgb(0, 255, 0); left: 300px; top: 300px;} /*green*/
-				100% {background: rgb(255, 0, 0); left: 0px; top: 0px;} /*red*/
+				0% {background: rgb(255, 0, 0); left: 0px; top: 0px;-webkit-transform: rotateY(0deg);} /*red*/
+				33% {background: rgb(0, 0, 255); left: 200px; top: 0px;-webkit-transform: rotateY(360deg);} /*blue*/
+				66% {background: rgb(0, 255, 0); left: 200px; top: 200px;-webkit-transform: rotateY(0deg);} /*green*/
+				100% {background: rgb(255, 0, 0); left: 0px; top: 0px;-webkit-transform: rotateY(360deg);} /*red*/
+			}
+
+			@keyframes colorsTwo {
+				0% {background: rgb(252, 0, 215); left: 200px; top: 200px;transform: rotateY(0deg);} 
+				33% {background: rgb(0, 252, 240); left: 400px; top: 0px;transform: rotateY(360deg);} 
+				66% {background: rgb(0, 255, 0); left: 400px; top: 400px;transform: rotateY(0deg);} 
+				100% {background: rgb(252, 0, 215); left: 200px; top: 200px;transform: rotateY(360deg);}
+			}
+			@-webkit-keyframes colorsTwo {
+				0% {background: rgb(252, 0, 215); left: 200px; top: 200px;-webkit-transform: rotateY(0deg);} 
+				33% {background: rgb(0, 252, 240); left: 400px; top: 0px;-webkit-transform: rotateY(360deg);} 
+				66% {background: rgb(0, 255, 0); left: 400px; top: 400px;-webkit-transform: rotateY(0deg);}
+				100% {background: rgb(252, 0, 215); left: 200px; top: 0px;-webkit-transform: rotateY(360deg);} 
+			}
+			@keyframes colorsThree {
+				0% {background: rgb(252, 0, 215); left: 400px; top: 400px;transform: rotateY(0deg);} 
+				33% {background: rgb(0, 252, 240); left: 600px; top: 0px;transform: rotateY(360deg);} 
+				66% {background: rgb(0, 255, 0); left: 600px; top: 600px;transform: rotateY(0deg);} 
+				100% {background: rgb(252, 0, 215); left: 400px; top: 400px;transform: rotateY(360deg);} 
+			}
+			@-webkit-keyframes colorsThree {
+				0% {background: rgb(252, 0, 215); left: 400px; top: 400px;-webkit-transform: rotateY(0deg);}
+				33% {background: rgb(0, 252, 240); left: 600px; top: 0px;-webkit-transform: rotateY(360deg);}
+				66% {background: rgb(0, 255, 0); left: 600px; top: 600px;-webkit-transform: rotateY(0deg);} 
+				100% {background: rgb(252, 0, 215); left: 400px; top: 400px;-webkit-transform: rotateY(360deg);}
 			}
 		</style>
 	</head>
 
 	<body>
 		<div class="square"></div>
+		<div class="square2"></div>
+		<div class="square3"></div>
 	</body>
 
 </html>
